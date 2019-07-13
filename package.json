@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "prebuild:docker": "npm run build",
-    "build:docker": "docker build -t configtut .",
+    "build:docker": "docker build -t docker-nestjs-config .",
     "build": "tsc -p tsconfig.build.json",
     "format": "prettier --write \"src/**/*.ts\"",
     "start": "ts-node -r tsconfig-paths/register src/main.ts",
@@ -14,6 +14,7 @@
     "start:debug": "nodemon --config nodemon-debug.json",
     "prestart:prod": "rimraf dist && npm run build",
     "start:prod": "node dist/main.js",
+    "start:docker": "docker rm -f configtut; docker run --rm --name docker-nestjs-config -it -p 3000:3000 configtut /sbin/my_init -- bash -l",
     "lint": "tslint -p tsconfig.json -c tslint.json",
     "test": "jest",
     "test:watch": "jest --watch",
