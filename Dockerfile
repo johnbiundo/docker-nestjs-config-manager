@@ -44,7 +44,7 @@
 #####################
 #####################
 # About phusion/baseimage
-# - as of 3/1/19, latest is 0.11
+# - as of 7/13/19, latest is 0.11
 # 0.11 specs
 # - Ubuntu 18.04 LTS
 # - uses a specialized init process: /sbin/my_init, to deal with containerization
@@ -70,7 +70,7 @@
 # BUILD
 ######################################################
 
-# 0.11 is latest as of 3/1/19
+# 0.11 is latest as of 7/13/19
 # should specify a version, rather than :latest, to ensure that we don't
 # have a dependency on a baseimage that changes
 FROM  phusion/baseimage:0.11
